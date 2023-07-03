@@ -1,0 +1,60 @@
+</html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        var nombres = [];
+        function insertar() {
+            let nombre = prompt("Ingrese Nombre: ")
+            nombres.push(nombre);
+        }
+        function mostrar() {
+            nombres.forEach(nombre => {
+                console.log(nombre);
+            });
+        }
+        function eliminar() {
+            nombres.pop();
+        }
+        function actualizar() {
+            var posicion = prompt("Ingrese la posicion")
+            var quitar = nombres[posicion]
+            nombres[posicion] = (prompt("ingrese nuevo nombre: "));
+        }
+        do {
+            console.log("   Menu    ");
+            console.log("1.-Crear")
+            console.log("2.-Mostrar")
+            console.log("3.-Eliminar")
+            console.log("4.-Actualizar")
+            console.log("0.-Salir")
+            var op = prompt("Ingrese su opcion")
+            opcion = parseInt(op)
+            switch (opcion) {
+                case 1:
+                    insertar();
+                    break;
+                case 2:
+                    mostrar();
+                    break;
+                case 3:
+                    eliminar();
+                    break;
+                case 4:
+                    actualizar();
+                    break;
+            }
+        } while (op != 0);
+    </script>
+</body>
+
+</html>
